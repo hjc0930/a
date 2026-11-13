@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="720" viewBox="0 0 1100 720">
+  <defs>
+    <marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#6B7280"/>
+    </marker>
+  </defs>
+  <rect width="1100" height="720" fill="#ffffff"/>
+
+  <text x="40" y="48" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="22" font-weight="700" fill="#1F2937">组件三层模型：Unstyled → Styled → Composed</text>
+  <text x="40" y="74" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="13" fill="#6B7280">上层依赖下层（单向）；Unstyled 不感知主题与业务</text>
+
+  <rect x="320" y="100" width="560" height="90" rx="10" fill="#ffe6cc" stroke="#d79b00" stroke-width="1.5"/>
+  <text x="342" y="128" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="16" font-weight="700" fill="#1F2937">① Composed（业务组合）</text>
+  <text x="342" y="150" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="12" fill="#374151">管：跨组件组合 / 业务流程 / 状态处理（空 / 加载 / 错误）</text>
+  <text x="342" y="170" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="12" fill="#374151">代表：Carbon Patterns、recipes、templates</text>
+
+  <rect x="320" y="270" width="560" height="90" rx="10" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+  <text x="342" y="298" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="16" font-weight="700" fill="#1F2937">② Styled（带样式组件）</text>
+  <text x="342" y="320" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="12" fill="#374151">管：视觉 + 主题（颜色 / 间距 / 圆角），样式必须引用 token</text>
+  <text x="342" y="340" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="12" fill="#374151">代表：shadcn/ui、Carbon React、Fluent React</text>
+
+  <rect x="320" y="440" width="560" height="90" rx="10" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+  <text x="342" y="468" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="16" font-weight="700" fill="#1F2937">③ Unstyled（无样式组件）</text>
+  <text x="342" y="490" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="12" fill="#374151">管：行为 + 无障碍（焦点 / 键盘 / ARIA / 状态机），零样式</text>
+  <text x="342" y="510" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="12" fill="#374151">代表：Radix UI、React Aria、Ark UI、Zag.js</text>
+
+  <rect x="80" y="270" width="180" height="90" rx="10" fill="#e1d5e7" stroke="#9673a6" stroke-width="1.5"/>
+  <text x="100" y="298" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="16" font-weight="700" fill="#1F2937">Token</text>
+  <text x="100" y="320" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="12" fill="#374151">颜色 / 间距 / 圆角</text>
+  <text x="100" y="340" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="12" fill="#374151">视觉取值来源</text>
+
+  <line x1="600" y1="190" x2="600" y2="266" stroke="#6B7280" stroke-width="1.6" marker-end="url(#a2)"/>
+  <text x="612" y="228" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="11" fill="#6B7280">组合</text>
+
+  <line x1="600" y1="360" x2="600" y2="436" stroke="#6B7280" stroke-width="1.6" marker-end="url(#a2)"/>
+  <text x="612" y="398" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="11" fill="#6B7280">包装（套 token）</text>
+
+  <line x1="260" y1="315" x2="316" y2="315" stroke="#9673A6" stroke-width="1.6" marker-end="url(#a2)"/>
+  <text x="262" y="306" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="10" fill="#9673A6">提供取值</text>
+
+  <text x="900" y="130" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="12" fill="#374151">复用性最低</text>
+  <text x="900" y="150" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="12" fill="#374151">离业务最近</text>
+
+  <text x="900" y="300" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="12" fill="#374151">可换肤：只换 token</text>
+  <text x="900" y="320" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="12" fill="#374151">不硬编码</text>
+
+  <text x="900" y="470" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="12" fill="#374151">复用性最高</text>
+  <text x="900" y="490" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="12" fill="#374151">与平台无关</text>
+
+  <rect x="60" y="570" width="980" height="70" rx="8" fill="#FFF7E6" stroke="#D6B656"/>
+  <text x="78" y="598" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="12" fill="#374151">读法：Unstyled 管「怎么动」，Styled 管「长什么样」，Composed 管「用来干什么」。</text>
+  <text x="78" y="620" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="12" fill="#374151">同一套 Unstyled（如 Radix Dialog）可派生「确认弹窗 / 表单弹窗 / 全屏抽屉」等多种 Composed。</text>
+</svg>

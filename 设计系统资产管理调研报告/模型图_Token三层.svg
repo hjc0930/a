@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="620" viewBox="0 0 900 620">
+  <defs>
+    <marker id="a1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#6B7280"/>
+    </marker>
+  </defs>
+  <rect width="900" height="620" fill="#ffffff"/>
+
+  <text x="40" y="48" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="22" font-weight="700" fill="#1F2937">Token 三层模型：Base → Purpose → Component</text>
+  <text x="40" y="74" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="13" fill="#6B7280">Purpose references Base (alias), not copied</text>
+
+  <rect x="60" y="100" width="620" height="90" rx="10" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+  <text x="82" y="128" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="16" font-weight="700" fill="#1F2937">① Base（基础值）</text>
+  <text x="82" y="150" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="12" fill="#374151">回答「是什么值」</text>
+  <text x="82" y="170" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="12" fill="#374151">例：color.blue.500 = #2F6FED</text>
+
+  <rect x="60" y="250" width="620" height="90" rx="10" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+  <text x="82" y="278" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="16" font-weight="700" fill="#1F2937">② Purpose（用途值）</text>
+  <text x="82" y="300" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="12" fill="#374151">回答「用在哪」</text>
+  <text x="82" y="320" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="12" fill="#374151">例：color.text.primary = {color.blue.900}</text>
+
+  <rect x="60" y="400" width="620" height="90" rx="10" fill="#ffe6cc" stroke="#d79b00" stroke-width="1.5"/>
+  <text x="82" y="428" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="16" font-weight="700" fill="#1F2937">③ Component（组件值）</text>
+  <text x="82" y="450" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="12" fill="#374151">回答「哪个组件的哪个状态」</text>
+  <text x="82" y="470" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="12" fill="#374151">例：button.bg.hover = {color.blue.600}</text>
+
+  <line x1="370" y1="250" x2="370" y2="194" stroke="#6B7280" stroke-width="1.6" marker-end="url(#a1)"/>
+  <text x="382" y="226" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="11" fill="#6B7280">引用（alias）</text>
+
+  <line x1="370" y1="400" x2="370" y2="344" stroke="#6B7280" stroke-width="1.6" marker-end="url(#a1)"/>
+  <text x="382" y="376" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="11" fill="#6B7280">引用（alias）</text>
+
+  <text x="700" y="130" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="12" fill="#374151">修改频率：极少</text>
+  <text x="700" y="150" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="12" fill="#374151">谁在用：品牌 / 色彩负责人</text>
+
+  <text x="700" y="280" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="12" fill="#374151">修改频率：低</text>
+  <text x="700" y="300" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="12" fill="#374151">谁在用：组件开发者</text>
+
+  <text x="700" y="430" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="12" fill="#374151">修改频率：中</text>
+  <text x="700" y="450" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="12" fill="#374151">谁在用：具体组件</text>
+
+  <rect x="60" y="530" width="780" height="60" rx="8" fill="#FFF7E6" stroke="#D6B656"/>
+  <text x="78" y="556" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="12" fill="#374151">原则：Purpose 用「引用」指向 Base，不复制值；改一次 Base → 全站跟随。</text>
+  <text x="78" y="576" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="12" fill="#374151">明暗模式 = 给同一组 Purpose 换一张 Base 映射表。禁止把 #2F6FED 直接写进组件。</text>
+</svg>

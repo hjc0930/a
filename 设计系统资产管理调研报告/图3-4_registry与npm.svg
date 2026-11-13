@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420">
+  <defs>
+    <marker id="s4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#6B7280"/>
+    </marker>
+  </defs>
+  <rect width="900" height="420" fill="#ffffff"/>
+  <text x="40" y="44" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="20" font-weight="700" fill="#1F2937">图 3-4 两种分发：复制源码 vs 安装黑盒</text>
+
+  <text x="60" y="88" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="14" font-weight="700" fill="#065F46">registry + CLI pull（shadcn）</text>
+
+  <rect x="60" y="100" width="320" height="70" rx="10" fill="#d5e8d4" stroke="#82b366"/>
+  <text x="78" y="132" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="13" fill="#1F2937">registry 清单（JSON）</text>
+  <text x="78" y="152" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="11" fill="#374151">name / dependencies / files</text>
+
+  <rect x="60" y="200" width="320" height="70" rx="10" fill="#d5e8d4" stroke="#82b366"/>
+  <text x="78" y="232" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="13" fill="#1F2937">CLI：npx shadcn add button</text>
+  <text x="78" y="252" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="11" fill="#374151">按清单拉源码 + 解析依赖</text>
+
+  <rect x="60" y="300" width="320" height="70" rx="10" fill="#d5e8d4" stroke="#82b366"/>
+  <text x="78" y="332" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="13" fill="#1F2937">你的仓库（button.tsx）</text>
+  <text x="78" y="352" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="11" fill="#374151">源码可见、可改，归你维护</text>
+
+  <line x1="220" y1="170" x2="220" y2="196" stroke="#6B7280" stroke-width="1.6" marker-end="url(#s4)"/>
+  <line x1="220" y1="270" x2="220" y2="296" stroke="#6B7280" stroke-width="1.6" marker-end="url(#s4)"/>
+
+  <text x="520" y="88" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="14" font-weight="700" fill="#6B7280">npm install</text>
+
+  <rect x="520" y="100" width="320" height="70" rx="10" fill="#F3F4F6" stroke="#9CA3AF"/>
+  <text x="538" y="132" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="13" fill="#374151">npm registry</text>
+  <text x="538" y="152" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="11" fill="#6B7280">包 + 版本号</text>
+
+  <rect x="520" y="200" width="320" height="70" rx="10" fill="#F3F4F6" stroke="#9CA3AF"/>
+  <text x="538" y="232" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="13" fill="#374151">npm install</text>
+  <text x="538" y="252" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="11" fill="#6B7280">下载到本地</text>
+
+  <rect x="520" y="300" width="320" height="70" rx="10" fill="#F3F4F6" stroke="#9CA3AF"/>
+  <text x="538" y="332" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="13" fill="#374151">node_modules（黑盒）</text>
+  <text x="538" y="352" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="11" fill="#6B7280">不可改、靠上游升级</text>
+
+  <line x1="680" y1="170" x2="680" y2="196" stroke="#9CA3AF" stroke-width="1.4" marker-end="url(#s4)"/>
+  <line x1="680" y1="270" x2="680" y2="296" stroke="#9CA3AF" stroke-width="1.4" marker-end="url(#s4)"/>
+
+  <text x="40" y="404" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="12" fill="#374151">shadcn 选左边：让 agent「看得见、改得动、按需拉」，而不是面对一个不可改的包。</text>
+</svg>

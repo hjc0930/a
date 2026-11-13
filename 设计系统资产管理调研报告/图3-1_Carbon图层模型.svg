@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="460" viewBox="0 0 820 460">
+  <rect width="820" height="460" fill="#ffffff"/>
+  <text x="40" y="44" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="20" font-weight="700" fill="#1F2937">图 3-1 Carbon 的图层模型</text>
+  <text x="40" y="70" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="12" fill="#6B7280">颜色按「页面上叠了几层」组织；同名 contextual token 随 Layer 组件自动映射</text>
+
+  <rect x="40" y="96" width="740" height="300" rx="10" fill="#F3F4F6" stroke="#9CA3AF"/>
+  <text x="56" y="120" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="13" font-weight="700" fill="#374151">base（页面底层）· $background</text>
+
+  <rect x="80" y="136" width="660" height="220" rx="10" fill="#E5E7EB" stroke="#9CA3AF"/>
+  <text x="96" y="160" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="13" font-weight="700" fill="#374151">layer-01 · $layer-01</text>
+
+  <rect x="120" y="176" width="580" height="140" rx="10" fill="#D1D5DB" stroke="#9CA3AF"/>
+  <text x="136" y="200" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="13" font-weight="700" fill="#374151">layer-02 · $layer-02</text>
+
+  <rect x="160" y="216" width="500" height="60" rx="8" fill="#9CA3AF" stroke="#6B7280"/>
+  <text x="176" y="251" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="13" font-weight="700" fill="#ffffff">layer-03 · $field-03 / $border-strong-03</text>
+
+  <text x="40" y="432" font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="12" fill="#374151">代码侧：组件放在 &lt;Layer&gt; 里，自动取下一层的 token——一套组件适配所有层。</text>
+</svg>
